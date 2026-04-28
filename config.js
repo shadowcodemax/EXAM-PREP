@@ -1,0 +1,1 @@
+window.GEMINI_API_KEY = "AIzaSyDW975LmggL-Vb4EgzRcWMhPO5rVbUo7ws";  // Paste your Gemini key here

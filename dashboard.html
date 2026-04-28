@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM PREP | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-logo">📘 EXAM PREP</div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item active">
+                <span class="nav-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="study.html" class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span>Study Notes</span>
+            </a>
+            <a href="configure.html" class="nav-item">
+                <span class="nav-icon">⚔️</span>
+                <span>Challenge Arena</span>
+            </a>
+            <a href="leaderboard.html" class="nav-item">
+                <span class="nav-icon">🏆</span>
+                <span>Leaderboard</span>
+            </a>
+            <a href="#" class="nav-item" onclick="logout()">
+                <span class="nav-icon">🚪</span>
+                <span>Logout</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info" id="userInfo">
+                <div class="user-avatar">👤</div>
+                <div class="user-name">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="stats-grid">
+            <div class="stat-card glass">
+                <div class="stat-icon">📝</div>
+                <div class="stat-info">
+                    <div class="stat-value" id="totalAttempts">0</div>
+                    <div class="stat-label">Total Attempts</div>
+                </div>
+            </div>
+            <div class="stat-card glass">
+                <div class="stat-icon">📊</div>
+                <div class="stat-info">
+                    <div class="stat-value" id="avgScore">0%</div>
+                    <div class="stat-label">Avg. Test Score</div>
+                </div>
+            </div>
+            <div class="stat-card glass">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-info">
+                    <div class="stat-value" id="studyStreak">1</div>
+                    <div class="stat-label">Study Streak</div>
+                </div>
+            </div>
+            <div class="stat-card glass">
+                <div class="stat-icon">📚</div>
+                <div class="stat-info">
+                    <div class="stat-value" id="totalCourses">0</div>
+                    <div class="stat-label">Total Courses</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="courses-header">
+            <h2>📖 MY COURSES</h2>
+            <span class="courses-count" id="coursesCount">Loading...</span>
+        </div>
+        
+        <div class="courses-grid" id="coursesGrid">
+            <div class="loading">Loading courses...</div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="questions.json.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

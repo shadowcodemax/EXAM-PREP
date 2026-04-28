@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM PREP | Study Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    
+    <nav>
+        <div class="logo">📘 EXAM PREP</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="study.html">Study Mode</a>
+            <a href="challenge.html">Challenge Arena</a>
+            <a href="leaderboard.html">Leaderboard</a>
+        </div>
+    </nav>
+
+    <div class="study-container">
+        <div class="subject-selector glass">
+            <h2>📚 Select Course</h2>
+            <label for="courseSelect" class="visually-hidden">Choose a course to study</label>
+            <select id="courseSelect" title="Select a course to study">
+                <option value="MTH101">MTH101 - Calculus I</option>
+                <option value="MTH102">MTH102 - Calculus II</option>
+                <option value="CHM101">CHM101 - General Chemistry I</option>
+                <option value="CHM102">CHM102 - General Chemistry II</option>
+                <option value="PHY107">PHY107 - General Physics</option>
+                <option value="COS101">COS101 - Computer Science</option>
+                <option value="BIO101">BIO101 - General Biology</option>
+            </select>
+            <button id="loadNotesBtn" class="btn">📖 Load Study Notes</button>
+        </div>
+
+        <div id="studyNotes" class="study-notes glass">
+            <h3 id="noteTitle"></h3>
+            <div id="noteContent"></div>
+        </div>
+
+        <div class="ai-chat glass">
+            <h3>🤖 AI TUTOR</h3>
+            <p>Ask me anything about your courses. I'll explain any concept in detail.</p>
+            <div id="chatMessages" class="chat-messages">
+                <div class="message bot">👋 Hi! I'm your AI Tutor. Ask me anything about MTH101, CHM101, or any course concept!</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userQuestion" placeholder="Example: Explain integration by parts..." onkeypress="if(event.key==='Enter') askAI()">
+                <button id="askBtn" class="btn" onclick="askAI()">Send →</button>
+            </div>
+            <div id="aiLoading" class="ai-loading">🤔 Thinking...</div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script src="study-mode.js"></script>
+</body>
+</html>

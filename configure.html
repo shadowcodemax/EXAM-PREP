@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNISTUDY | Configure Session</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-logo">📘 UNISTUDY</div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="study.html" class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span>Study Notes</span>
+            </a>
+            <a href="configure.html" class="nav-item active">
+                <span class="nav-icon">⚔️</span>
+                <span>Challenge Arena</span>
+            </a>
+            <a href="leaderboard.html" class="nav-item">
+                <span class="nav-icon">🏆</span>
+                <span>Leaderboard</span>
+            </a>
+            <a href="#" class="nav-item" onclick="logout()">
+                <span class="nav-icon">🚪</span>
+                <span>Logout</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">👤</div>
+                <div class="user-name" id="userName">Scholar</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="configure-container">
+            <div class="configure-header">
+                <h1>⚔️ CHALLENGE ARENA</h1>
+                <p>Configure your CBT experience</p>
+            </div>
+
+            <div class="configure-card glass">
+                <h3>📋 Configure Your Session</h3>
+                <p class="configure-subtitle">Tailor the CBT experience to your current study goals.</p>
+
+                <div class="config-section">
+                    <div class="config-group">
+                        <label>🎯 Select Course</label>
+                        <select id="configCourse" class="config-select" title="Select your course">
+                            <option value="">-- Loading courses --</option>
+                        </select>
+                    </div>
+
+                    <div class="config-group">
+                        <label>📝 Feedback Mode</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="feedbackMode" value="instant" checked>
+                                <span class="radio-label">
+                                    <strong>Instant Feedback</strong>
+                                    <small>See corrections immediately</small>
+                                </span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="feedbackMode" value="review">
+                                <span class="radio-label">
+                                    <strong>Exam Simulation</strong>
+                                    <small>Review after submission</small>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="config-group">
+                        <label>⏱️ Timer Duration</label>
+                        <div class="timer-options">
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="15"><span>15 Minutes</span></label>
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="30" checked><span>30 Minutes</span></label>
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="45"><span>45 Minutes</span></label>
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="60"><span>60 Minutes</span></label>
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="unlimited"><span>Unlimited</span></label>
+                        </div>
+                    </div>
+
+                    <div class="config-group">
+                        <label>📊 Question Count</label>
+                        <div class="question-options">
+                            <label class="question-option"><input type="radio" name="questionCount" value="5"><span>5 Questions</span><small>Quick Quiz</small></label>
+                            <label class="question-option"><input type="radio" name="questionCount" value="10" checked><span>10 Questions</span><small>Standard</small></label>
+                            <label class="question-option"><input type="radio" name="questionCount" value="20"><span>20 Questions</span><small>Full Exam</small></label>
+                            <label class="question-option"><input type="radio" name="questionCount" value="30"><span>30 Questions</span><small>Extended</small></label>
+                            <label class="question-option"><input type="radio" name="questionCount" value="50"><span>50 Questions</span><small>Marathon</small></label>
+                        </div>
+                    </div>
+
+                    <button id="startPracticeBtn" class="btn-start">🚀 START PRACTICE SESSION →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="questions.json.js"></script>
+    <script src="configure.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

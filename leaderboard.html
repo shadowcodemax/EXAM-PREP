@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM PREP | Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    
+    <nav>
+        <div class="logo">📘 EXAM PREP</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="study.html">Study Mode</a>
+            <a href="challenge.html">Challenge Arena</a>
+            <a href="leaderboard.html">Leaderboard</a>
+        </div>
+    </nav>
+
+    <div class="leaderboard-container">
+        <div class="leaderboard-card glass">
+            <h2>🏆 GLOBAL LEADERBOARD</h2>
+            <p>Top performers who crushed the Challenge Arena</p>
+            
+            <label for="leaderboardCourse" class="visually-hidden">Filter by course</label>
+            <select id="leaderboardCourse" class="course-filter" title="Filter leaderboard by course">
+                <option value="all">All Courses</option>
+                <option value="MTH101">MTH101</option>
+                <option value="MTH102">MTH102</option>
+                <option value="CHM101">CHM101</option>
+                <option value="CHM102">CHM102</option>
+                <option value="PHY107">PHY107</option>
+                <option value="COS101">COS101</option>
+            </select>
+            
+            <table class="leaderboard-table">
+                <thead>
+                    <tr><th>Rank</th><th>Nickname</th><th>Course</th><th>Score</th><th>Date</th></tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    <tr><td colspan="5">Loading scores...</td></tr>
+                </tbody>
+            </table>
+            
+            <button id="resetLeaderboardBtn" class="btn reset-btn">⚠️ Reset All Scores (Admin)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="leaderboard.js"></script>
+</body>
+</html>

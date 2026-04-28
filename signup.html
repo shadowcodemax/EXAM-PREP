@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM PREP | Create Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <canvas id="particleCanvas"></canvas>
+    
+    <div class="auth-container">
+        <div class="auth-card glass">
+            <div class="auth-logo">📘 EXAM PREP</div>
+            <h2>Create Account</h2>
+            <p>Start your journey to academic excellence</p>
+            
+            <form id="signupForm">
+                <div class="input-group">
+                    <label>👤 Full Name</label>
+                    <input type="text" id="signupName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>📧 Email Address</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>📱 Phone Number (Optional)</label>
+                    <input type="tel" id="signupPhone" placeholder="Enter your phone number">
+                </div>
+                
+                <div class="input-group">
+                    <label>🏫 Institution</label>
+                    <select id="signupInstitution" title="Select your educational institution">
+                        <option value="UNILAG">University of Lagos (UNILAG)</option>
+                        <option value="UI">University of Ibadan (UI)</option>
+                        <option value="OAU">Obafemi Awolowo University (OAU)</option>
+                        <option value="UNN">University of Nigeria, Nsukka (UNN)</option>
+                        <option value="LASU">Lagos State University (LASU)</option>
+                        <option value="Other">Other Institution</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>🔒 Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a password" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>🔒 Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                </div>
+                
+                <button type="submit" class="btn-auth">Create Account →</button>
+            </form>
+            
+            <div class="auth-links">
+                <a href="login.html">Already have an account? <strong>Login</strong></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

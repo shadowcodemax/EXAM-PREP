@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNISTUDY | CBT Exam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    
+    <div class="exam-container">
+        <!-- Exam Header -->
+        <div class="exam-header glass">
+            <div class="exam-title">
+                <h2 id="examCourse">Loading...</h2>
+                <span id="examCode">Course Code</span>
+            </div>
+            <div class="exam-timer">
+                ⏱️ <span id="timerDisplay">00:00</span>
+            </div>
+            <div class="exam-progress">
+                <span id="currentQNum">1</span>/<span id="totalQ">0</span>
+            </div>
+        </div>
+
+        <!-- Question Map -->
+        <div class="question-map-container glass" id="questionMapContainer">
+            <div class="map-header">
+                <span>📋 QUESTION MAP</span>
+                <button class="toggle-map" onclick="toggleMap()">−</button>
+            </div>
+            <div class="question-map" id="questionMap"></div>
+        </div>
+
+        <!-- Question Area -->
+        <div class="question-area glass">
+            <div class="question-header">
+                <span class="question-badge">QUESTION <span id="questionNumber">1</span></span>
+                <span class="question-topic" id="questionTopic">Topic</span>
+            </div>
+            
+            <div class="question-text" id="questionText">
+                Loading question...
+            </div>
+            
+            <div class="options-area" id="optionsArea">
+                <!-- Options will appear here -->
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="nav-btn prev" id="prevBtn" onclick="previousQuestion()">
+                ← Previous
+            </button>
+            <button class="nav-btn next" id="nextBtn" onclick="nextQuestion()">
+                Next Question →
+            </button>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-modal" onclick="closeResults()">&times;</span>
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="questions.json.js"></script>
+    <script src="exam.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
