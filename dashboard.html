@@ -5,74 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXAM PREP | Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <canvas id="particleCanvas"></canvas>
     
-    <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-logo">📘 EXAM PREP</div>
         <nav class="sidebar-nav">
-            <a href="dashboard.html" class="nav-item active">
-                <span class="nav-icon">📊</span>
-                <span>Dashboard</span>
-            </a>
-            <a href="study.html" class="nav-item">
-                <span class="nav-icon">📚</span>
-                <span>Study Notes</span>
-            </a>
-            <a href="configure.html" class="nav-item">
-                <span class="nav-icon">⚔️</span>
-                <span>Challenge Arena</span>
-            </a>
-            <a href="leaderboard.html" class="nav-item">
-                <span class="nav-icon">🏆</span>
-                <span>Leaderboard</span>
-            </a>
-            <a href="#" class="nav-item" onclick="logout()">
-                <span class="nav-icon">🚪</span>
-                <span>Logout</span>
-            </a>
+            <a href="dashboard.html" class="nav-item active">📊 Dashboard</a>
+            <a href="study.html" class="nav-item">📚 Study Notes</a>
+            <a href="configure.html" class="nav-item">⚔️ Challenge Arena</a>
+            <a href="leaderboard.html" class="nav-item">🏆 Leaderboard</a>
+            <a href="#" class="nav-item" onclick="logout()">🚪 Logout</a>
         </nav>
         <div class="sidebar-footer">
-            <div class="user-info" id="userInfo">
+            <div class="user-info">
                 <div class="user-avatar">👤</div>
-                <div class="user-name">Loading...</div>
+                <div class="user-name" id="userName">Scholar</div>
             </div>
         </div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
         <div class="stats-grid">
             <div class="stat-card glass">
-                <div class="stat-icon">📝</div>
-                <div class="stat-info">
-                    <div class="stat-value" id="totalAttempts">0</div>
-                    <div class="stat-label">Total Attempts</div>
-                </div>
+                <div class="stat-value" id="totalAttempts">0</div>
+                <div class="stat-label">Total Attempts</div>
             </div>
             <div class="stat-card glass">
-                <div class="stat-icon">📊</div>
-                <div class="stat-info">
-                    <div class="stat-value" id="avgScore">0%</div>
-                    <div class="stat-label">Avg. Test Score</div>
-                </div>
+                <div class="stat-value" id="avgScore">0%</div>
+                <div class="stat-label">Avg. Test Score</div>
             </div>
             <div class="stat-card glass">
-                <div class="stat-icon">🔥</div>
-                <div class="stat-info">
-                    <div class="stat-value" id="studyStreak">1</div>
-                    <div class="stat-label">Study Streak</div>
-                </div>
+                <div class="stat-value" id="studyStreak">1</div>
+                <div class="stat-label">Study Streak</div>
             </div>
             <div class="stat-card glass">
-                <div class="stat-icon">📚</div>
-                <div class="stat-info">
-                    <div class="stat-value" id="totalCourses">0</div>
-                    <div class="stat-label">Total Courses</div>
-                </div>
+                <div class="stat-value" id="totalCourses">0</div>
+                <div class="stat-label">Total Courses</div>
             </div>
         </div>
 
@@ -86,7 +56,30 @@
         </div>
     </div>
 
-   <script src="courses.js"></script>
-<script src="auth.js"></script>
-<script src="dashboard.js"></script>
-<script src="script.js"></script>
+    <script src="courses.js"></script>
+    <script>
+        // Immediate check if courses loaded
+        console.log("COURSES object:", window.COURSES);
+        
+        if (!window.COURSES || Object.keys(window.COURSES).length === 0) {
+            // Fallback courses if not loaded
+            window.COURSES = {
+                "BIO101": { name: "General Biology I", icon: "🧬", questions: 50 },
+                "BIO102": { name: "Plant Diversity", icon: "🌿", questions: 50 },
+                "CHM101": { name: "General Chemistry", icon: "🧪", questions: 50 },
+                "MTH101": { name: "Calculus I", icon: "📐", questions: 50 },
+                "PHY101": { name: "Physics", icon: "⚡", questions: 50 },
+                "COS101": { name: "Computer Science", icon: "💻", questions: 50 },
+                "GST101": { name: "Use of English", icon: "📖", questions: 45 },
+                "ANA101": { name: "Gross Anatomy", icon: "🦴", questions: 50 },
+                "BMS101": { name: "Medical Sciences", icon: "🏥", questions: 50 },
+                "CYB101": { name: "Cybersecurity", icon: "🔒", questions: 45 }
+            };
+            console.log("Fallback courses loaded:", Object.keys(window.COURSES).length);
+        }
+    </script>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
