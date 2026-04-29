@@ -1,0 +1,381 @@
+
+    
+        "100",
+        "100-120 bpm",
+        "101",
+        "110",
+        "111"
+        "12",
+        "120-140 bpm"
+        "14",
+        "20",
+        "25",
+        "3"
+        "30",
+        "35"
+        "4"
+        "4",
+        "40-60 bpm",
+        "5",
+        "6",
+        "60-100 bpm",
+        "A carbohydrate",
+        "A lipid"
+        "A positive",
+        "A protein",
+        "AB positive"
+        "Acid fast"
+        "Adrenaline",
+        "Aerobes",
+        "Ag",
+        "Anaerobes",
+        "Antonie van Leeuwenhoek",
+        "Au",
+        "B positive",
+        "Carries oxygen",
+        "Central Processing Unit",
+        "Central Program Unit",
+        "Charles Darwin",
+        "Clots blood",
+        "Comma-shaped"
+        "Computer Personal Unit",
+        "Contains genetic material",
+        "Core Processing Unit"
+        "Cortisol",
+        "DNA replication",
+        "Deoxyribonucleic Acid",
+        "Deoxyribose Nucleic Acid",
+        "Detoxification",
+        "Digests food"
+        "Dioxyribonucleic Acid"
+        "E = mc²",
+        "Energy production"
+        "English",
+        "F = ma",
+        "F = mg",
+        "Facultative",
+        "Fe",
+        "Fights infection",
+        "Filtering urine",
+        "Francis Crick"
+        "Golgi"
+        "Goodluck Jonathan"
+        "Gram negative",
+        "Gram positive",
+        "Gram variable",
+        "Gregor Mendel",
+        "Hausa",
+        "Igbo"
+        "Insulin",
+        "Joseph Lister"
+        "Joule",
+        "Leishmania",
+        "Lipid synthesis",
+        "Louis Pasteur",
+        "Lysosome",
+        "Microaerophiles"
+        "Mitochondria",
+        "Newton",
+        "Nnamdi Azikiwe",
+        "Nucleus"
+        "Nucleus",
+        "O negative",
+        "Olusegun Obasanjo",
+        "Packages proteins"
+        "Pascal"
+        "Pb"
+        "Peroxisome",
+        "Plasmodium",
+        "Produces energy",
+        "Producing hormones"
+        "Protein synthesis",
+        "Pumping blood",
+        "Ribonucleic Acid",
+        "Ribosome",
+        "Robert Koch",
+        "Rod-shaped",
+        "Shehu Shagari",
+        "Spherical",
+        "Spiral",
+        "Synthesizes proteins",
+        "Thyroxine"
+        "Toxoplasma"
+        "Trypanosoma",
+        "Unit of heredity",
+        "V = IR"
+        "Vacuole",
+        "Watson & Crick",
+        "Watt",
+        "Yoruba",
+        [array[i], array[j]] = [array[j], array[i]];
+        allQuestions = allQuestions.concat(QUESTION_BANK[course]);
+        const j = Math.floor(Math.random() * (i + 1));
+      "correct": 0,
+      "explanation": "15/100 × 200 = 30"
+      "explanation": "2x = 8, x = 4"
+      "explanation": "5 = 4+1 = 101 in binary"
+      "explanation": "A gene is a segment of DNA that codes for a trait"
+      "explanation": "Aerobes require oxygen for growth"
+      "explanation": "Au from Latin 'aurum'"
+      "explanation": "CPU is the brain of the computer"
+      "explanation": "Carbon has 6 protons"
+      "explanation": "Cocci are round/spherical bacteria"
+      "explanation": "DNA = Deoxyribonucleic Acid"
+      "explanation": "E. coli stains pink = Gram negative"
+      "explanation": "English is the official language"
+      "explanation": "Force = mass × acceleration"
+      "explanation": "Hemoglobin in red blood cells binds to oxygen"
+      "explanation": "Insulin lowers blood glucose levels"
+      "explanation": "Leeuwenhoek was first to observe microorganisms"
+      "explanation": "Lysosomes contain hydrolytic enzymes for digestion"
+      "explanation": "Mendel discovered the laws of inheritance"
+      "explanation": "Mitochondria produce ATP through cellular respiration"
+      "explanation": "Named after Sir Isaac Newton"
+      "explanation": "Normal adult resting heart rate is 60-100 beats per minute"
+      "explanation": "O negative blood can be given to any patient"
+      "explanation": "Plasmodium is transmitted by mosquitoes"
+      "explanation": "Ribosomes are responsible for protein synthesis"
+      "explanation": "Shehu Shagari was elected in 1979"
+      "explanation": "The liver detoxifies harmful substances"
+      "explanation": "The nucleus houses DNA and controls cell activities"
+      "id": 1,
+      "id": 10,
+      "id": 100,
+      "id": 11,
+      "id": 12,
+      "id": 13,
+      "id": 14,
+      "id": 15,
+      "id": 16,
+      "id": 17,
+      "id": 18,
+      "id": 19,
+      "id": 2,
+      "id": 20,
+      "id": 21,
+      "id": 22,
+      "id": 23,
+      "id": 24,
+      "id": 25,
+      "id": 26,
+      "id": 27,
+      "id": 28,
+      "id": 29,
+      "id": 3,
+      "id": 30,
+      "id": 31,
+      "id": 32,
+      "id": 33,
+      "id": 34,
+      "id": 35,
+      "id": 36,
+      "id": 37,
+      "id": 38,
+      "id": 39,
+      "id": 4,
+      "id": 40,
+      "id": 41,
+      "id": 42,
+      "id": 43,
+      "id": 44,
+      "id": 45,
+      "id": 46,
+      "id": 47,
+      "id": 48,
+      "id": 49,
+      "id": 5,
+      "id": 50,
+      "id": 51,
+      "id": 52,
+      "id": 53,
+      "id": 54,
+      "id": 55,
+      "id": 56,
+      "id": 57,
+      "id": 58,
+      "id": 59,
+      "id": 6,
+      "id": 60,
+      "id": 61,
+      "id": 62,
+      "id": 63,
+      "id": 64,
+      "id": 65,
+      "id": 66,
+      "id": 67,
+      "id": 68,
+      "id": 69,
+      "id": 7,
+      "id": 70,
+      "id": 71,
+      "id": 72,
+      "id": 73,
+      "id": 74,
+      "id": 75,
+      "id": 76,
+      "id": 77,
+      "id": 78,
+      "id": 79,
+      "id": 8,
+      "id": 80,
+      "id": 81,
+      "id": 82,
+      "id": 83,
+      "id": 84,
+      "id": 85,
+      "id": 86,
+      "id": 87,
+      "id": 88,
+      "id": 89,
+      "id": 9,
+      "id": 90,
+      "id": 91,
+      "id": 92,
+      "id": 93,
+      "id": 94,
+      "id": 95,
+      "id": 96,
+      "id": 97,
+      "id": 98,
+      "id": 99,
+      "options": [
+      "question": "Solve for x: 2x + 5 = 13",
+      "question": "What are bacteria that require oxygen called?",
+      "question": "What does CPU stand for?",
+      "question": "What does DNA stand for?",
+      "question": "What is 15% of 200?",
+      "question": "What is Newton's Second Law?",
+      "question": "What is a gene?",
+      "question": "What is the Gram staining result for E. coli?",
+      "question": "What is the SI unit of force?",
+      "question": "What is the atomic number of Carbon?",
+      "question": "What is the binary representation of 5?",
+      "question": "What is the chemical symbol for Gold?",
+      "question": "What is the function of hemoglobin?",
+      "question": "What is the function of ribosomes?",
+      "question": "What is the function of the liver?",
+      "question": "What is the function of the nucleus?",
+      "question": "What is the normal resting heart rate for adults?",
+      "question": "What is the official language of Nigeria?",
+      "question": "What is the shape of cocci bacteria?",
+      "question": "Which blood type is the universal donor?",
+      "question": "Which hormone regulates blood sugar?",
+      "question": "Which microorganism causes malaria?",
+      "question": "Which organelle contains digestive enzymes?",
+      "question": "Which organelle is known as the powerhouse of the cell?",
+      "question": "Who is considered the father of microbiology?",
+      "question": "Who is known as the father of genetics?",
+      "question": "Who was the first Executive President of Nigeria?",
+      ],
+    // Algae (Thallophyta) (6-15)
+    // Bryophytes & Non-vascular plants (16-25)
+    // Classification & Characteristics (1-20)
+    // Comparisons (81-100)
+    // Pteridophytes (Seedless Vascular Plants) (26-50)
+    // Seed Plants (Spermatophytes) (51-80)
+    console.log(`Loading ${count} questions for ${course}`);
+    const allQuestions = QUESTION_BANK[course];
+    const shuffled = shuffleArray([...allQuestions]);
+    for (let course in QUESTION_BANK) {
+    for (let i = array.length - 1; i > 0; i--) {
+    if (!allQuestions) return [];
+    let allQuestions = [];
+    return array;
+    return shuffled.slice(0, Math.min(count, shuffled.length));
+    {
+    { id: 1, question: "According to R.H. Whittaker's classification, Kingdom Plantae includes organisms that are:", options: ["Prokaryotic and heterotrophic", "Eukaryotic and autotrophic", "Prokaryotic and autotrophic", "Eukaryotic and heterotrophic"], correct: 1, explanation: "Plants are eukaryotic, multicellular and autotrophic organisms with rigid cell walls and chloroplasts for photosynthesis." },
+    { id: 10, question: "Which of the following is an example of brown algae?", options: ["Fucus", "Spirogyra", "Chlamydomonas", "Euglena"], correct: 0, explanation: "Fucus is a brown alga (Phaeophycophyta). Spirogyra and Chlamydomonas are green algae." },
+    { id: 11, question: "Algae are classified based on:", options: ["Pigments, reserved food, and mode of reproduction", "Size and shape only", "Habitat only", "Color only"], correct: 0, explanation: "Algae classification considers pigments, reserved food, and mode of reproduction, leading to nine divisions." },
+    { id: 12, question: "Which of the following is a red alga?", options: ["Plumaria elegans", "Spirogyra", "Ulothrix", "Vaucheria"], correct: 0, explanation: "Plumaria elegans is a red alga (Rhodophycophyta)." },
+    { id: 13, question: "Euglena belongs to which division of algae?", options: ["Euglenophycophyta", "Chlorophyophyta", "Phaeophycophyta", "Rhodophycophyta"], correct: 0, explanation: "Euglena is a euglenoid, belonging to Euglenophycophyta." },
+    { id: 14, question: "Which of the following is a dinoflagellate?", options: ["Ceratium", "Euglena", "Spirogyra", "Fucus"], correct: 0, explanation: "Ceratium is a dinoflagellate (Pyrrophycophyta)." },
+    { id: 15, question: "Algae are found where there is adequate moisture, with a few on:", options: ["Damp soils and shady places", "Desert sand", "Ice caps", "Volcanic rocks"], correct: 0, explanation: "Algae require moisture and are found in damp soils and shady places." },
+    { id: 16, question: "Non-vascular plants lack specialized cells for transporting:", options: ["Water and nutrients", "Oxygen", "Carbon dioxide", "Only water"], correct: 0, explanation: "Non-vascular plants (bryophytes) lack xylem and phloem for transporting water and nutrients." },
+    { id: 17, question: "Which of the following are examples of bryophytes?", options: ["Liverworts, mosses, and hornworts", "Ferns and horsetails", "Algae and fungi", "Gymnosperms and angiosperms"], correct: 0, explanation: "Bryophytes include liverworts, mosses, and hornworts." },
+    { id: 18, question: "Bryophytes are considered:", options: ["Seedless and non-vascular", "Seedless and vascular", "Seed-bearing and non-vascular", "Seed-bearing and vascular"], correct: 0, explanation: "Bryophytes are seedless non-vascular plants believed to have emerged early in evolutionary timeline." },
+    { id: 2, question: "Which of the following is NOT a characteristic of Kingdom Plantae?", options: ["Presence of rigid cell wall", "They are autotrophs", "They are motile", "They contain chlorophyll"], correct: 2, explanation: "Plants are non-motile organisms. They cannot move from place to place." },
+    { id: 26, question: "Pteridophytes are considered the first:", options: ["Vascular plants to evolve on land", "Non-vascular plants", "Flowering plants", "Seed-bearing plants"], correct: 0, explanation: "Pteridophytes are the first vascular plants to evolve on land." },
+    { id: 27, question: "Which of the following is a characteristic of pteridophytes?", options: ["They are seedless vascular cryptogams", "They produce seeds", "They are non-vascular", "They are flowering plants"], correct: 0, explanation: "Pteridophytes are seedless vascular cryptogams that reproduce through spores." },
+    { id: 28, question: "The male sex organs in pteridophytes are called:", options: ["Antheridia", "Archegonia", "Sporangia", "Gametangia"], correct: 0, explanation: "The male sex organs in pteridophytes are antheridia, while female organs are archegonia." },
+    { id: 29, question: "The dominant generation in pteridophytes is the:", options: ["Sporophyte (2n)", "Gametophyte (n)", "Both are equal", "Neither is dominant"], correct: 0, explanation: "The diploid sporophyte is the dominant phase in pteridophytes." },
+    { id: 3, question: "The plant body of thallophytes is called:", options: ["Thallus", "Frond", "Rhizome", "Corm"], correct: 0, explanation: "Thallophytes have a primitive and simple plant body called thallus, without differentiated roots, stems and leaves." },
+    { id: 30, question: "Spores in pteridophytes are produced in structures called:", options: ["Sporangia", "Antheridia", "Archegonia", "Gametangia"], correct: 0, explanation: "Sporangia are structures in which spores are formed through meiosis." },
+    { id: 31, question: "A pteridophyte that produces one type of spore is called:", options: ["Homosporous", "Heterosporous", "Monoecious", "Dioecious"], correct: 0, explanation: "Homosporous pteridophytes produce one type of spore containing both male and female parts." },
+    { id: 32, question: "Ferns belong to which class of pteridophytes?", options: ["Polypodiopsida", "Lycopodiopsida", "Psilotopsida", "Equisetopsida"], correct: 0, explanation: "True ferns belong to Polypodiopsida, the main group of pteridophytes." },
+    { id: 33, question: "The leaves of ferns are called:", options: ["Fronds", "Pinnae", "Sporophylls", "Strobili"], correct: 0, explanation: "Fern leaves are called fronds and often branch multiple times." },
+    { id: 34, question: "Sori in ferns are:", options: ["Clusters of sporangia", "Male sex organs", "Female sex organs", "Root structures"], correct: 0, explanation: "Sori are small brown clusters of sporangia on the underside of fern fronds." },
+    { id: 35, question: "Lycopods are examples of:", options: ["Lycopodiopsida", "Polypodiopsida", "Angiosperms", "Gymnosperms"], correct: 0, explanation: "Lycopods (clubmoss, spikemoss) belong to Lycopodiopsida, the oldest group of pteridophytes." },
+    { id: 36, question: "Horsetails belong to which class?", options: ["Equisetopsida", "Psilotopsida", "Marattiopsida", "Lycopodiopsida"], correct: 0, explanation: "Horsetails (Equisetum) are characterized by jointed stems and belong to Equisetopsida." },
+    { id: 37, question: "When antheridia mature before archegonia in pteridophytes, it is called:", options: ["Protandrous", "Protogynous", "Monoecious", "Dioecious"], correct: 0, explanation: "Protandrous means antheridia mature before archegonia." },
+    { id: 38, question: "When archegonia mature before antheridia, it is called:", options: ["Protogynous", "Protandrous", "Monoecious", "Dioecious"], correct: 0, explanation: "Protogynous means archegonia mature before antheridia." },
+    { id: 4, question: "Which division of plants is known as non-flowering and non-seed bearing plants?", options: ["Phanerogams", "Cryptogams", "Angiosperms", "Gymnosperms"], correct: 1, explanation: "Cryptogams are non-flowering and non-seed bearing plants, including Thallophyta, Bryophyta and Pteridophyta." },
+    { id: 5, question: "The five subgroups (divisions) of the plant kingdom are:", options: ["Thallophyta, Bryophyta, Pteridophyta, Gymnosperm, Angiosperm", "Monera, Protista, Fungi, Plantae, Animalia", "Algae, Fungi, Bryophyta, Pteridophyta, Spermatophyta", "Chlorophyta, Phaeophyta, Rhodophyta, Bryophyta, Tracheophyta"], correct: 0, explanation: "The plant kingdom is classified into Thallophyta, Bryophyta, Pteridophyta, Gymnosperm and Angiosperm." },
+    { id: 51, question: "The term 'Spermatophyta' refers to:", options: ["Seed plants", "Non-seed plants", "Flowering plants only", "Non-flowering plants only"], correct: 0, explanation: "Spermatophyta are seed plants, including both gymnosperms and angiosperms." },
+    { id: 52, question: "A seed consists of:", options: ["Seed coat, embryo, and endosperm/cotyledons", "Only embryo", "Only seed coat", "Only endosperm"], correct: 0, explanation: "A seed has a protective seed coat (testa), an embryo, and nutritive tissue (endosperm or cotyledons)." },
+    { id: 53, question: "Gymnosperms are characterized by:", options: ["Naked seeds (not enclosed in fruit)", "Seeds enclosed in fruit", "No seeds", "Only flowers"], correct: 0, explanation: "Gymnosperms have naked seeds not enclosed within an ovary or fruit." },
+    { id: 54, question: "Angiosperms are characterized by:", options: ["Seeds enclosed in fruit", "Naked seeds", "No seeds", "Only cones"], correct: 0, explanation: "Angiosperms have seeds enclosed within an ovary that matures into a fruit." },
+    { id: 55, question: "Which of the following is a gymnosperm?", options: ["Pinus (Pine)", "Sunflower", "Mango", "Wheat"], correct: 0, explanation: "Pinus (Pine) is a conifer and gymnosperm. Sunflower, mango, and wheat are angiosperms." },
+    { id: 56, question: "Which of the following is an angiosperm?", options: ["Sunflower", "Cycad", "Pine", "Ginkgo"], correct: 0, explanation: "Sunflower is a flowering plant (angiosperm). Cycads, pines, and ginkgo are gymnosperms." },
+    { id: 57, question: "Gymnosperms are mostly:", options: ["Evergreen trees or shrubs", "Herbaceous plants", "Aquatic plants", "Parasitic plants"], correct: 0, explanation: "Gymnosperms usually have woody stems and are mostly evergreen trees or shrubs." },
+    { id: 58, question: "Pollination in gymnosperms is mostly by:", options: ["Wind", "Insects", "Water", "Animals"], correct: 0, explanation: "Gymnosperms are mostly wind-pollinated (anemophilous)." },
+    { id: 59, question: "What is double fertilization?", options: ["Fusion of one sperm with egg, and another with polar nuclei (unique to angiosperms)", "Two sperm fusing with one egg", "One sperm fusing with two eggs", "Fusion of sperm with polar nuclei only"], correct: 0, explanation: "Double fertilization is unique to angiosperms: one sperm fertilizes the egg, another fuses with polar nuclei to form endosperm." },
+    { id: 6, question: "Which of the following is an example of green algae?", options: ["Spirogyra", "Fucus", "Sargassum", "Euglena"], correct: 0, explanation: "Spirogyra is a green alga (Chlorophyophyta). Fucus and Sargassum are brown algae." },
+    { id: 60, question: "The four main divisions of gymnosperms are:", options: ["Coniferophyta, Cycadophyta, Ginkgophyta, Gnetophyta", "Bryophyta, Pteridophyta, Gymnosperms, Angiosperms", "Algae, Fungi, Bryophyta, Pteridophyta", "Monocots, Dicots, Conifers, Cycads"], correct: 0, explanation: "The four gymnosperm divisions are Coniferophyta, Cycadophyta, Ginkgophyta, and Gnetophyta." },
+    { id: 7, question: "The cell wall of algae is composed of:", options: ["True cellulose", "Chitin", "Peptidoglycan", "Lignin"], correct: 0, explanation: "Algae have cell walls composed of true cellulose, unlike fungi which have chitin." },
+    { id: 8, question: "Which division of algae contains diatoms?", options: ["Bacillariophyophyta", "Chlorophyophyta", "Phaeophycophyta", "Rhodophycophyta"], correct: 0, explanation: "Diatoms belong to Bacillariophyophyta. They have silica cell walls." },
+    { id: 81, question: "Which of the following is a difference between bryophytes and pteridophytes?", options: ["Bryophytes are non-vascular while pteridophytes are vascular", "Bryophytes have seeds while pteridophytes do not", "Bryophytes are vascular while pteridophytes are non-vascular", "Both have seeds"], correct: 0, explanation: "Bryophytes lack vascular tissue, while pteridophytes have vascular tissue." },
+    { id: 82, question: "In bryophytes, the dominant generation is the:", options: ["Gametophyte", "Sporophyte", "Both equal", "Neither"], correct: 0, explanation: "Bryophytes are gametophyte-dominant, while pteridophytes and spermatophytes are sporophyte-dominant." },
+    { id: 83, question: "Which group of plants first developed true roots, stems, and leaves?", options: ["Pteridophytes", "Bryophytes", "Algae", "Angiosperms"], correct: 0, explanation: "Pteridophytes were the first to develop true roots, stems, and leaves." },
+    { id: 84, question: "Fertilization in gymnosperms and angiosperms results in:", options: ["A diploid zygote that develops into an embryo", "A haploid spore", "A gametophyte", "A thallus"], correct: 0, explanation: "Fertilization forms a diploid zygote, which develops into an embryo enclosed within the seed." }
+    { id: 9, question: "The reserve carbohydrate in algae is:", options: ["Starch", "Glycogen", "Cellulose", "Glucose"], correct: 0, explanation: "Algae store starch as reserve carbohydrate, not glycogen (which is found in fungi)." },
+    }
+    },
+  "BIO101": [
+  "BIO102": [
+  "BIO103": [
+  "BIO104": [
+  "BMS101": [
+  "BMS102": [
+  "BMS103": [
+  "BMS104": [
+  "BMS105": [
+  "BMS106": [
+  "CHM101": [
+  "CHM102": [
+  "COS101": [
+  "COS102": [
+  "GST101": [
+  "GST102": [
+  "MCB101": [
+  "MCB102": [
+  "MCB103": [
+  "MCB104": [
+  "MCB105": [
+  "MTH101": [
+  "MTH102": [
+  "PHY101": [
+  "PHY102": [
+  ]
+  ],
+// ==================== BIO102 - GENERAL BIOLOGY II (Plant Diversity) ====================
+// Add BIO102 questions to QUESTION_BANK
+// Based on actual lecture notes from Nigerian University
+// Courses: 25
+// Generated: 4/28/2026, 11:01:52 PM
+// Total Questions: 2500
+// UNISTUDY - COMPLETE QUESTION BANK
+QUESTION_BANK["BIO102"] = BIO102_QUESTIONS;
+];
+console.log('✅ UNISTUDY Question Bank Loaded!');
+console.log(`📊 25 courses, 2500 questions`);
+const BIO102_QUESTIONS = [
+const QUESTION_BANK = {
+function getQuestions(course, count = 20) {
+function getRandomQuestions(count = 20) {
+function shuffleArray(array) {
+window.QUESTION_BANK = QUESTION_BANK;
+window.getQuestions = getQuestions;
+window.getRandomQuestions = getRandomQuestions;
+window.shuffleArray = shuffleArray;
+}
+};
