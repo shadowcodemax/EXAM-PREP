@@ -50,17 +50,29 @@
             <p>Select a course to access comprehensive lecture notes</p>
         </div>
 
-        <div class="study-courses-grid" id="studyCoursesGrid">
-            <!-- Courses will load here -->
-        </div>
+        <!-- Course Selection Grid -->
+        <div class="study-courses-grid" id="studyCoursesGrid"></div>
 
+        <!-- Notes Panel (Hidden by default) -->
         <div id="studyNotesPanel" class="study-notes-panel glass" style="display: none;">
             <div class="notes-header">
                 <h2 id="notesCourseTitle">Course Notes</h2>
                 <button class="close-notes" onclick="closeNotes()">✕</button>
             </div>
-            <div id="notesContent" class="notes-content">
-                <!-- Notes content here -->
+            <div class="notes-content" id="notesContent"></div>
+            
+            <!-- AI Tutor Section -->
+            <div class="ai-tutor-section">
+                <h3>🤖 AI Tutor</h3>
+                <p>Ask me anything about this course</p>
+                <div class="chat-box" id="chatBox">
+                    <div class="chat-message bot">👋 Hi! I'm your AI Tutor. Ask me anything about this course!</div>
+                </div>
+                <div class="ai-input-group">
+                    <input type="text" id="aiQuestion" placeholder="Example: Explain the difference between gymnosperms and angiosperms..." onkeypress="if(event.key==='Enter') askAITutor()">
+                    <button onclick="askAITutor()">Send →</button>
+                </div>
+                <div id="aiLoading" style="display:none; margin-top:1rem;">🤔 Thinking...</div>
             </div>
         </div>
     </div>
