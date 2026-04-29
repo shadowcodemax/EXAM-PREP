@@ -11,7 +11,8 @@
     <canvas id="particleCanvas"></canvas>
     
     <div class="auth-container">
-        <div class="auth-card glass">
+        <!-- Login Card -->
+        <div id="loginCard" class="auth-card glass">
             <div class="auth-logo">📘 EXAM PREP</div>
             <h2>Welcome Back</h2>
             <p>Login to continue your CBT journey</p>
@@ -21,12 +22,10 @@
                     <label>📧 Email or Username</label>
                     <input type="text" id="loginEmail" placeholder="Enter your email or username" required>
                 </div>
-                
                 <div class="input-group">
                     <label>🔒 Password</label>
                     <input type="password" id="loginPassword" placeholder="Enter your password" required>
                 </div>
-                
                 <button type="submit" class="btn-auth">Login →</button>
             </form>
             
@@ -35,6 +34,7 @@
             </div>
         </div>
 
+        <!-- Signup Card (hidden by default) -->
         <div id="signupCard" class="auth-card glass" style="display: none;">
             <div class="auth-logo">📘 EXAM PREP</div>
             <h2>Create Account</h2>
@@ -79,12 +79,12 @@
 
     <script>
         function showSignup() {
-            document.querySelector('.auth-card').style.display = 'none';
+            document.getElementById('loginCard').style.display = 'none';
             document.getElementById('signupCard').style.display = 'block';
         }
         function showLogin() {
             document.getElementById('signupCard').style.display = 'none';
-            document.querySelector('.auth-card').style.display = 'block';
+            document.getElementById('loginCard').style.display = 'block';
         }
     </script>
     <script src="auth.js"></script>

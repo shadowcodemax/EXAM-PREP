@@ -6,34 +6,52 @@ if (currentUser) {
     document.querySelector('.user-name').textContent = currentUser.name.split(' ')[0];
 }
 
+// Course display names
+function getCourseName(code) {
+    const names = {
+        "BIO101": "General Biology I", 
+        "BIO102": "General Biology II - Plant Diversity", 
+        "BIO103": "Cell Biology", 
+        "BIO104": "Genetics",
+        "BMS101": "Intro to Medical Sciences", 
+        "BMS102": "Medical Biochemistry", 
+        "BMS103": "Medical Physiology", 
+        "BMS104": "Medical Anatomy", 
+        "BMS105": "Pathology", 
+        "BMS106": "Pharmacology",
+        "MCB101": "General Microbiology", 
+        "MCB102": "Bacteriology", 
+        "MCB103": "Virology", 
+        "MCB104": "Immunology", 
+        "MCB105": "Medical Microbiology",
+        "MTH101": "Calculus I", 
+        "MTH102": "Calculus II",
+        "PHY101": "General Physics I", 
+        "PHY102": "General Physics II",
+        "CHM101": "General Chemistry I", 
+        "CHM102": "General Chemistry II",
+        "COS101": "Intro to Computer Science", 
+        "COS102": "Programming",
+        "GST101": "Use of English", 
+        "GST102": "Nigerian Peoples & Culture"
+    };
+    return names[code] || code;
+}
+
 // Get all courses from QUESTION_BANK
 function getAllCourses() {
     const courses = [];
-    for (const [code, questions] of Object.entries(window.QUESTION_BANK || {})) {
-        courses.push({
-            code: code,
-            name: getCourseName(code),
-            questionCount: questions.length,
-            faculty: getFaculty(code)
-        });
+    if (window.QUESTION_BANK) {
+        for (const [code, questions] of Object.entries(window.QUESTION_BANK)) {
+            courses.push({
+                code: code,
+                name: getCourseName(code),
+                questionCount: questions.length,
+                faculty: getFaculty(code)
+            });
+        }
     }
     return courses.sort((a, b) => a.code.localeCompare(b.code));
-}
-
-// Get course display name
-function getCourseName(code) {
-    const names = {
-        "BIO101": "General Biology I", "BIO102": "General Biology II", "BIO103": "Cell Biology", "BIO104": "Genetics",
-        "BMS101": "Intro to Medical Sciences", "BMS102": "Medical Biochemistry", "BMS103": "Medical Physiology", 
-        "BMS104": "Medical Anatomy", "BMS105": "Pathology", "BMS106": "Pharmacology",
-        "MCB101": "General Microbiology", "MCB102": "Bacteriology", "MCB103": "Virology", "MCB104": "Immunology", "MCB105": "Medical Microbiology",
-        "MTH101": "Calculus I", "MTH102": "Calculus II",
-        "PHY101": "General Physics I", "PHY102": "General Physics II",
-        "CHM101": "General Chemistry I", "CHM102": "General Chemistry II",
-        "COS101": "Intro to Computer Science", "COS102": "Programming",
-        "GST101": "Use of English", "GST102": "Nigerian Peoples & Culture"
-    };
-    return names[code] || code;
 }
 
 // Get faculty/icon
@@ -45,6 +63,7 @@ function getFaculty(code) {
     if (code.startsWith("PHY")) return { icon: "⚡", color: "#3b82f6" };
     if (code.startsWith("CHM")) return { icon: "🧪", color: "#06b6d4" };
     if (code.startsWith("COS")) return { icon: "💻", color: "#ec4899" };
+    if (code.startsWith("GST")) return { icon: "📖", color: "#6b7280" };
     return { icon: "📚", color: "#6b7280" };
 }
 
@@ -61,6 +80,10 @@ function loadStats() {
     
     const streak = localStorage.getItem('studyStreak') || 1;
     document.getElementById('studyStreak').textContent = streak;
+    
+    // Update total courses count
+    const totalCourses = getAllCourses().length;
+    document.getElementById('totalCourses').textContent = totalCourses;
 }
 
 // Render courses grid
@@ -69,8 +92,9 @@ function renderCourses() {
     const grid = document.getElementById('coursesGrid');
     const coursesCount = document.getElementById('coursesCount');
     
-    coursesCount.textContent = courses.length + " COURSES";
-    document.getElementById('totalCourses').textContent = courses.length;
+    if (coursesCount) {
+        coursesCount.textContent = courses.length + " COURSES";
+    }
     
     if (courses.length === 0) {
         grid.innerHTML = '<div class="loading">No courses found. Please run the question generator.</div>';
@@ -105,12 +129,17 @@ function updateMastery(courseCode, percentage) {
     localStorage.setItem('courseMasteries', JSON.stringify(masteries));
 }
 
-// Initialize
-loadStats();
-renderCourses();
+// Initialize dashboard
+function initDashboard() {
+    loadStats();
+    renderCourses();
+}
 
 // Make logout global
 window.logout = function() {
     localStorage.removeItem('currentUser');
     window.location.href = 'index.html';
 };
+
+// Run initialization when DOM is ready
+document.addEventListener('DOMContentLoaded', initDashboard);

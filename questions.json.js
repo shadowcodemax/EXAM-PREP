@@ -30055,7 +30055,70 @@ const QUESTION_BANK = {
     }
   ]
 };
+// ==================== BIO102 - GENERAL BIOLOGY II (Plant Diversity) ====================
+// Based on actual lecture notes from Nigerian University
 
+const BIO102_QUESTIONS = [
+    // Classification & Characteristics (1-20)
+    { id: 1, question: "According to R.H. Whittaker's classification, Kingdom Plantae includes organisms that are:", options: ["Prokaryotic and heterotrophic", "Eukaryotic and autotrophic", "Prokaryotic and autotrophic", "Eukaryotic and heterotrophic"], correct: 1, explanation: "Plants are eukaryotic, multicellular and autotrophic organisms with rigid cell walls and chloroplasts for photosynthesis." },
+    { id: 2, question: "Which of the following is NOT a characteristic of Kingdom Plantae?", options: ["Presence of rigid cell wall", "They are autotrophs", "They are motile", "They contain chlorophyll"], correct: 2, explanation: "Plants are non-motile organisms. They cannot move from place to place." },
+    { id: 3, question: "The plant body of thallophytes is called:", options: ["Thallus", "Frond", "Rhizome", "Corm"], correct: 0, explanation: "Thallophytes have a primitive and simple plant body called thallus, without differentiated roots, stems and leaves." },
+    { id: 4, question: "Which division of plants is known as non-flowering and non-seed bearing plants?", options: ["Phanerogams", "Cryptogams", "Angiosperms", "Gymnosperms"], correct: 1, explanation: "Cryptogams are non-flowering and non-seed bearing plants, including Thallophyta, Bryophyta and Pteridophyta." },
+    { id: 5, question: "The five subgroups (divisions) of the plant kingdom are:", options: ["Thallophyta, Bryophyta, Pteridophyta, Gymnosperm, Angiosperm", "Monera, Protista, Fungi, Plantae, Animalia", "Algae, Fungi, Bryophyta, Pteridophyta, Spermatophyta", "Chlorophyta, Phaeophyta, Rhodophyta, Bryophyta, Tracheophyta"], correct: 0, explanation: "The plant kingdom is classified into Thallophyta, Bryophyta, Pteridophyta, Gymnosperm and Angiosperm." },
+    
+    // Algae (Thallophyta) (6-15)
+    { id: 6, question: "Which of the following is an example of green algae?", options: ["Spirogyra", "Fucus", "Sargassum", "Euglena"], correct: 0, explanation: "Spirogyra is a green alga (Chlorophyophyta). Fucus and Sargassum are brown algae." },
+    { id: 7, question: "The cell wall of algae is composed of:", options: ["True cellulose", "Chitin", "Peptidoglycan", "Lignin"], correct: 0, explanation: "Algae have cell walls composed of true cellulose, unlike fungi which have chitin." },
+    { id: 8, question: "Which division of algae contains diatoms?", options: ["Bacillariophyophyta", "Chlorophyophyta", "Phaeophycophyta", "Rhodophycophyta"], correct: 0, explanation: "Diatoms belong to Bacillariophyophyta. They have silica cell walls." },
+    { id: 9, question: "The reserve carbohydrate in algae is:", options: ["Starch", "Glycogen", "Cellulose", "Glucose"], correct: 0, explanation: "Algae store starch as reserve carbohydrate, not glycogen (which is found in fungi)." },
+    { id: 10, question: "Which of the following is an example of brown algae?", options: ["Fucus", "Spirogyra", "Chlamydomonas", "Euglena"], correct: 0, explanation: "Fucus is a brown alga (Phaeophycophyta). Spirogyra and Chlamydomonas are green algae." },
+    { id: 11, question: "Algae are classified based on:", options: ["Pigments, reserved food, and mode of reproduction", "Size and shape only", "Habitat only", "Color only"], correct: 0, explanation: "Algae classification considers pigments, reserved food, and mode of reproduction, leading to nine divisions." },
+    { id: 12, question: "Which of the following is a red alga?", options: ["Plumaria elegans", "Spirogyra", "Ulothrix", "Vaucheria"], correct: 0, explanation: "Plumaria elegans is a red alga (Rhodophycophyta)." },
+    { id: 13, question: "Euglena belongs to which division of algae?", options: ["Euglenophycophyta", "Chlorophyophyta", "Phaeophycophyta", "Rhodophycophyta"], correct: 0, explanation: "Euglena is a euglenoid, belonging to Euglenophycophyta." },
+    { id: 14, question: "Which of the following is a dinoflagellate?", options: ["Ceratium", "Euglena", "Spirogyra", "Fucus"], correct: 0, explanation: "Ceratium is a dinoflagellate (Pyrrophycophyta)." },
+    { id: 15, question: "Algae are found where there is adequate moisture, with a few on:", options: ["Damp soils and shady places", "Desert sand", "Ice caps", "Volcanic rocks"], correct: 0, explanation: "Algae require moisture and are found in damp soils and shady places." },
+    
+    // Bryophytes & Non-vascular plants (16-25)
+    { id: 16, question: "Non-vascular plants lack specialized cells for transporting:", options: ["Water and nutrients", "Oxygen", "Carbon dioxide", "Only water"], correct: 0, explanation: "Non-vascular plants (bryophytes) lack xylem and phloem for transporting water and nutrients." },
+    { id: 17, question: "Which of the following are examples of bryophytes?", options: ["Liverworts, mosses, and hornworts", "Ferns and horsetails", "Algae and fungi", "Gymnosperms and angiosperms"], correct: 0, explanation: "Bryophytes include liverworts, mosses, and hornworts." },
+    { id: 18, question: "Bryophytes are considered:", options: ["Seedless and non-vascular", "Seedless and vascular", "Seed-bearing and non-vascular", "Seed-bearing and vascular"], correct: 0, explanation: "Bryophytes are seedless non-vascular plants believed to have emerged early in evolutionary timeline." },
+    
+    // Pteridophytes (Seedless Vascular Plants) (26-50)
+    { id: 26, question: "Pteridophytes are considered the first:", options: ["Vascular plants to evolve on land", "Non-vascular plants", "Flowering plants", "Seed-bearing plants"], correct: 0, explanation: "Pteridophytes are the first vascular plants to evolve on land." },
+    { id: 27, question: "Which of the following is a characteristic of pteridophytes?", options: ["They are seedless vascular cryptogams", "They produce seeds", "They are non-vascular", "They are flowering plants"], correct: 0, explanation: "Pteridophytes are seedless vascular cryptogams that reproduce through spores." },
+    { id: 28, question: "The male sex organs in pteridophytes are called:", options: ["Antheridia", "Archegonia", "Sporangia", "Gametangia"], correct: 0, explanation: "The male sex organs in pteridophytes are antheridia, while female organs are archegonia." },
+    { id: 29, question: "The dominant generation in pteridophytes is the:", options: ["Sporophyte (2n)", "Gametophyte (n)", "Both are equal", "Neither is dominant"], correct: 0, explanation: "The diploid sporophyte is the dominant phase in pteridophytes." },
+    { id: 30, question: "Spores in pteridophytes are produced in structures called:", options: ["Sporangia", "Antheridia", "Archegonia", "Gametangia"], correct: 0, explanation: "Sporangia are structures in which spores are formed through meiosis." },
+    { id: 31, question: "A pteridophyte that produces one type of spore is called:", options: ["Homosporous", "Heterosporous", "Monoecious", "Dioecious"], correct: 0, explanation: "Homosporous pteridophytes produce one type of spore containing both male and female parts." },
+    { id: 32, question: "Ferns belong to which class of pteridophytes?", options: ["Polypodiopsida", "Lycopodiopsida", "Psilotopsida", "Equisetopsida"], correct: 0, explanation: "True ferns belong to Polypodiopsida, the main group of pteridophytes." },
+    { id: 33, question: "The leaves of ferns are called:", options: ["Fronds", "Pinnae", "Sporophylls", "Strobili"], correct: 0, explanation: "Fern leaves are called fronds and often branch multiple times." },
+    { id: 34, question: "Sori in ferns are:", options: ["Clusters of sporangia", "Male sex organs", "Female sex organs", "Root structures"], correct: 0, explanation: "Sori are small brown clusters of sporangia on the underside of fern fronds." },
+    { id: 35, question: "Lycopods are examples of:", options: ["Lycopodiopsida", "Polypodiopsida", "Angiosperms", "Gymnosperms"], correct: 0, explanation: "Lycopods (clubmoss, spikemoss) belong to Lycopodiopsida, the oldest group of pteridophytes." },
+    { id: 36, question: "Horsetails belong to which class?", options: ["Equisetopsida", "Psilotopsida", "Marattiopsida", "Lycopodiopsida"], correct: 0, explanation: "Horsetails (Equisetum) are characterized by jointed stems and belong to Equisetopsida." },
+    { id: 37, question: "When antheridia mature before archegonia in pteridophytes, it is called:", options: ["Protandrous", "Protogynous", "Monoecious", "Dioecious"], correct: 0, explanation: "Protandrous means antheridia mature before archegonia." },
+    { id: 38, question: "When archegonia mature before antheridia, it is called:", options: ["Protogynous", "Protandrous", "Monoecious", "Dioecious"], correct: 0, explanation: "Protogynous means archegonia mature before antheridia." },
+    
+    // Seed Plants (Spermatophytes) (51-80)
+    { id: 51, question: "The term 'Spermatophyta' refers to:", options: ["Seed plants", "Non-seed plants", "Flowering plants only", "Non-flowering plants only"], correct: 0, explanation: "Spermatophyta are seed plants, including both gymnosperms and angiosperms." },
+    { id: 52, question: "A seed consists of:", options: ["Seed coat, embryo, and endosperm/cotyledons", "Only embryo", "Only seed coat", "Only endosperm"], correct: 0, explanation: "A seed has a protective seed coat (testa), an embryo, and nutritive tissue (endosperm or cotyledons)." },
+    { id: 53, question: "Gymnosperms are characterized by:", options: ["Naked seeds (not enclosed in fruit)", "Seeds enclosed in fruit", "No seeds", "Only flowers"], correct: 0, explanation: "Gymnosperms have naked seeds not enclosed within an ovary or fruit." },
+    { id: 54, question: "Angiosperms are characterized by:", options: ["Seeds enclosed in fruit", "Naked seeds", "No seeds", "Only cones"], correct: 0, explanation: "Angiosperms have seeds enclosed within an ovary that matures into a fruit." },
+    { id: 55, question: "Which of the following is a gymnosperm?", options: ["Pinus (Pine)", "Sunflower", "Mango", "Wheat"], correct: 0, explanation: "Pinus (Pine) is a conifer and gymnosperm. Sunflower, mango, and wheat are angiosperms." },
+    { id: 56, question: "Which of the following is an angiosperm?", options: ["Sunflower", "Cycad", "Pine", "Ginkgo"], correct: 0, explanation: "Sunflower is a flowering plant (angiosperm). Cycads, pines, and ginkgo are gymnosperms." },
+    { id: 57, question: "Gymnosperms are mostly:", options: ["Evergreen trees or shrubs", "Herbaceous plants", "Aquatic plants", "Parasitic plants"], correct: 0, explanation: "Gymnosperms usually have woody stems and are mostly evergreen trees or shrubs." },
+    { id: 58, question: "Pollination in gymnosperms is mostly by:", options: ["Wind", "Insects", "Water", "Animals"], correct: 0, explanation: "Gymnosperms are mostly wind-pollinated (anemophilous)." },
+    { id: 59, question: "What is double fertilization?", options: ["Fusion of one sperm with egg, and another with polar nuclei (unique to angiosperms)", "Two sperm fusing with one egg", "One sperm fusing with two eggs", "Fusion of sperm with polar nuclei only"], correct: 0, explanation: "Double fertilization is unique to angiosperms: one sperm fertilizes the egg, another fuses with polar nuclei to form endosperm." },
+    { id: 60, question: "The four main divisions of gymnosperms are:", options: ["Coniferophyta, Cycadophyta, Ginkgophyta, Gnetophyta", "Bryophyta, Pteridophyta, Gymnosperms, Angiosperms", "Algae, Fungi, Bryophyta, Pteridophyta", "Monocots, Dicots, Conifers, Cycads"], correct: 0, explanation: "The four gymnosperm divisions are Coniferophyta, Cycadophyta, Ginkgophyta, and Gnetophyta." },
+    
+    // Comparisons (81-100)
+    { id: 81, question: "Which of the following is a difference between bryophytes and pteridophytes?", options: ["Bryophytes are non-vascular while pteridophytes are vascular", "Bryophytes have seeds while pteridophytes do not", "Bryophytes are vascular while pteridophytes are non-vascular", "Both have seeds"], correct: 0, explanation: "Bryophytes lack vascular tissue, while pteridophytes have vascular tissue." },
+    { id: 82, question: "In bryophytes, the dominant generation is the:", options: ["Gametophyte", "Sporophyte", "Both equal", "Neither"], correct: 0, explanation: "Bryophytes are gametophyte-dominant, while pteridophytes and spermatophytes are sporophyte-dominant." },
+    { id: 83, question: "Which group of plants first developed true roots, stems, and leaves?", options: ["Pteridophytes", "Bryophytes", "Algae", "Angiosperms"], correct: 0, explanation: "Pteridophytes were the first to develop true roots, stems, and leaves." },
+    { id: 84, question: "Fertilization in gymnosperms and angiosperms results in:", options: ["A diploid zygote that develops into an embryo", "A haploid spore", "A gametophyte", "A thallus"], correct: 0, explanation: "Fertilization forms a diploid zygote, which develops into an embryo enclosed within the seed." }
+];
+
+// Add BIO102 questions to QUESTION_BANK
+QUESTION_BANK["BIO102"] = BIO102_QUESTIONS;
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));

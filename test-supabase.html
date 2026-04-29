@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Supabase Connection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+        }
+        .status {
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .success {
+            background: #10b981;
+            color: white;
+        }
+        .error {
+            background: #ef4444;
+            color: white;
+        }
+        .info {
+            background: #3b82f6;
+            color: white;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <h1>🔌 Testing Supabase Connection</h1>
+    <div id="status" class="status info">Checking connection...</div>
+    <div id="details" style="margin-top: 20px; font-size: 14px; color: #888;"></div>
+
+    <script>
+        // ============================================
+        // REPLACE WITH YOUR ACTUAL SUPABASE CREDENTIALS
+        // ============================================
+        const SUPABASE_URL = 'https://cabgizwuitpxbtkxxtsx.supabase.co'
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNhYmdpend1aXRweGJ0a3h4dHN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0MDM1ODIsImV4cCI6MjA5Mjk3OTU4Mn0.9fEZBAb6h1comuBpUpjkoWh9m-bLcbY5EvOvvyPsugM'
+        // ============================================
+        
+        const supabase = supabaseJs.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+        
+        async function testConnection() {
+            const statusDiv = document.getElementById('status')
+            const detailsDiv = document.getElementById('details')
+            
+            // Test 1: Check if supabase is initialized
+            if (!supabase) {
+                statusDiv.innerHTML = '❌ Supabase client failed to initialize'
+                statusDiv.className = 'status error'
+                detailsDiv.innerHTML = 'Check if CDN loaded correctly'
+                return
+            }
+            
+            detailsDiv.innerHTML += '✓ Supabase client initialized<br>'
+            
+            // Test 2: Try to query the scores table
+            try {
+                const { data, error } = await supabase.from('scores').select('count', { count: 'exact', head: true })
+                
+                if (error) {
+                    if (error.message.includes('relation') && error.message.includes('does not exist')) {
+                        statusDiv.innerHTML = '⚠️ Connected but "scores" table not found!'
+                        statusDiv.className = 'status info'
+                        detailsDiv.innerHTML += '❌ Table "scores" does not exist. Run the CREATE TABLE command in Supabase SQL Editor.'
+                    } else {
+                        statusDiv.innerHTML = `❌ Connection error: ${error.message}`
+                        statusDiv.className = 'status error'
+                        detailsDiv.innerHTML += `Error: ${error.message}`
+                    }
+                } else {
+                    statusDiv.innerHTML = '✅ CONNECTED TO SUPABASE!'
+                    statusDiv.className = 'status success'
+                    detailsDiv.innerHTML += '✓ Successfully queried the scores table<br>'
+                    detailsDiv.innerHTML += '🎉 Your database is ready to use!'
+                }
+            } catch (err) {
+                statusDiv.innerHTML = `❌ Connection failed: ${err.message}`
+                statusDiv.className = 'status error'
+                detailsDiv.innerHTML = `Error: ${err.message}<br>Check your URL and anon key`
+            }
+        }
+        
+        // Run the test
+        testConnection()
+    </script>
+</body>
+</html>
