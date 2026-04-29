@@ -1,39 +1,40 @@
-// Configure Session Logic
+// configure.js - Load all courses from COURSES object
 
 // Load user info
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 if (currentUser) {
-    document.getElementById('userName').textContent = currentUser.name.split(' ')[0];
+    const userNameSpan = document.getElementById('userName');
+    if (userNameSpan) userNameSpan.textContent = currentUser.name.split(' ')[0];
 }
 
-// Load courses into dropdown
-function loadCourses() {
+// Load all courses from COURSES object
+function loadCoursesToDropdown() {
     const courseSelect = document.getElementById('configCourse');
     if (!courseSelect) return;
     
-    const courses = window.QUESTION_BANK ? Object.keys(window.QUESTION_BANK) : [];
-    
-    if (courses.length === 0) {
-        courseSelect.innerHTML = '<option value="">No courses found. Run generator first.</option>';
+    // Use COURSES from courses.js
+    if (typeof window.COURSES === 'undefined') {
+        console.error("COURSES not loaded!");
+        courseSelect.innerHTML = '<option value="">Error: Courses not loaded</option>';
         return;
     }
     
+    const courses = Object.keys(window.COURSES).sort();
+    
+    if (courses.length === 0) {
+        courseSelect.innerHTML = '<option value="">No courses available</option>';
+        return;
+    }
+    
+    console.log("Loading", courses.length, "courses to dropdown");
+    
     courseSelect.innerHTML = courses.map(code => {
-        let name = code;
-        if (code.startsWith('BIO')) name = code + ' - Biology';
-        else if (code.startsWith('BMS')) name = code + ' - Medical Sciences';
-        else if (code.startsWith('MCB')) name = code + ' - Microbiology';
-        else if (code.startsWith('MTH')) name = code + ' - Mathematics';
-        else if (code.startsWith('PHY')) name = code + ' - Physics';
-        else if (code.startsWith('CHM')) name = code + ' - Chemistry';
-        else if (code.startsWith('COS')) name = code + ' - Computer Science';
-        else if (code.startsWith('GST')) name = code + ' - General Studies';
-        else name = code;
-        
-        return `<option value="${code}">${name}</option>`;
+        const courseInfo = window.COURSES[code];
+        const displayName = `${code} - ${courseInfo.name}`;
+        return `<option value="${code}">${displayName}</option>`;
     }).join('');
     
-    // Check URL for selected course
+    // Check URL for preselected course
     const urlParams = new URLSearchParams(window.location.search);
     const courseParam = urlParams.get('course');
     if (courseParam && courses.includes(courseParam)) {
@@ -42,7 +43,7 @@ function loadCourses() {
 }
 
 // Start practice session
-document.getElementById('startPracticeBtn').addEventListener('click', () => {
+document.getElementById('startPracticeBtn')?.addEventListener('click', () => {
     const course = document.getElementById('configCourse').value;
     if (!course) {
         alert('Please select a course!');
@@ -53,17 +54,26 @@ document.getElementById('startPracticeBtn').addEventListener('click', () => {
     const timerDuration = document.querySelector('input[name="timerDuration"]:checked').value;
     const questionCount = parseInt(document.querySelector('input[name="questionCount"]:checked').value);
     
-    // Get questions for the course
-    const questions = window.getQuestions ? window.getQuestions(course, questionCount) : [];
+    // Get questions from QUESTION_BANK or generate fallback
+    let questions = [];
+    if (window.getQuestions) {
+        questions = window.getQuestions(course, questionCount);
+    }
+    
+    if (!questions || questions.length === 0) {
+        // Generate fallback questions if none exist
+        questions = generateFallbackQuestions(course, questionCount);
+    }
     
     if (questions.length === 0) {
-        alert('No questions available for this course!');
+        alert('No questions available for this course yet!');
         return;
     }
     
-    // Save exam config to sessionStorage
+    // Save exam config
     const examConfig = {
         course: course,
+        courseName: window.COURSES?.[course]?.name || course,
         feedbackMode: feedbackMode,
         timerDuration: timerDuration === 'unlimited' ? null : parseInt(timerDuration),
         questionCount: questionCount,
@@ -72,10 +82,25 @@ document.getElementById('startPracticeBtn').addEventListener('click', () => {
     };
     
     sessionStorage.setItem('examConfig', JSON.stringify(examConfig));
-    
-    // Redirect to exam page
     window.location.href = 'exam.html';
 });
 
-// Load courses when page loads
-loadCourses();
+// Generate fallback questions if none exist
+function generateFallbackQuestions(course, count) {
+    const questions = [];
+    const courseInfo = window.COURSES?.[course] || { name: course };
+    
+    for (let i = 1; i <= Math.min(count, 50); i++) {
+        questions.push({
+            id: i,
+            question: `Question ${i}: What is a key concept in ${courseInfo.name} (${course})?`,
+            options: ["Option A: Fundamental principle", "Option B: Secondary concept", "Option C: Advanced topic", "Option D: Basic definition"],
+            correct: i % 4,
+            explanation: `This is a fundamental concept in ${courseInfo.name}. Review your course materials for more details.`
+        });
+    }
+    return questions;
+}
+
+// Initialize
+loadCoursesToDropdown();
