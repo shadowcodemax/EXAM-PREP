@@ -3,47 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNISTUDY | Configure Session</title>
+    <title>EXAM PREP | Configure Session</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <canvas id="particleCanvas"></canvas>
     
-    <!-- Sidebar -->
     <div class="sidebar">
-        <div class="sidebar-logo">📘 UNISTUDY</div>
+        <div class="sidebar-logo">📘 EXAM PREP</div>
         <nav class="sidebar-nav">
-            <a href="dashboard.html" class="nav-item">
-                <span class="nav-icon">📊</span>
-                <span>Dashboard</span>
-            </a>
-            <a href="study.html" class="nav-item">
-                <span class="nav-icon">📚</span>
-                <span>Study Notes</span>
-            </a>
-            <a href="configure.html" class="nav-item active">
-                <span class="nav-icon">⚔️</span>
-                <span>Challenge Arena</span>
-            </a>
-            <a href="leaderboard.html" class="nav-item">
-                <span class="nav-icon">🏆</span>
-                <span>Leaderboard</span>
-            </a>
-            <a href="#" class="nav-item" onclick="logout()">
-                <span class="nav-icon">🚪</span>
-                <span>Logout</span>
-            </a>
+            <a href="dashboard.html" class="nav-item">📊 Dashboard</a>
+            <a href="study.html" class="nav-item">📚 Study Notes</a>
+            <a href="configure.html" class="nav-item active">⚔️ Challenge Arena</a>
+            <a href="leaderboard.html" class="nav-item">🏆 Leaderboard</a>
+            <a href="#" class="nav-item" onclick="logout()">🚪 Logout</a>
         </nav>
-        <div class="sidebar-footer">
-            <div class="user-info">
-                <div class="user-avatar">👤</div>
-                <div class="user-name" id="userName">Scholar</div>
-            </div>
-        </div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
         <div class="configure-container">
             <div class="configure-header">
@@ -58,8 +34,26 @@
                 <div class="config-section">
                     <div class="config-group">
                         <label>🎯 Select Course</label>
-                        <select id="configCourse" class="config-select" title="Select your course">
-                            <option value="">-- Loading courses --</option>
+                        <select id="configCourse" class="config-select">
+                            <option value="">-- Select a course --</option>
+                            <option value="ANA101">ANA101 - Gross Anatomy I</option>
+                            <option value="ANA102">ANA102 - Gross Anatomy II</option>
+                            <option value="BCH101">BCH101 - General Biochemistry</option>
+                            <option value="BIO101">BIO101 - General Biology I</option>
+                            <option value="BIO102">BIO102 - Plant Diversity</option>
+                            <option value="BMS101">BMS101 - Intro to Medical Sciences</option>
+                            <option value="BMS102">BMS102 - Medical Biochemistry</option>
+                            <option value="BMS103">BMS103 - Medical Physiology</option>
+                            <option value="BMS104">BMS104 - Medical Anatomy</option>
+                            <option value="CHM101">CHM101 - General Chemistry I</option>
+                            <option value="COS101">COS101 - Intro to Computer Science</option>
+                            <option value="CYB101">CYB101 - Cybersecurity</option>
+                            <option value="GST101">GST101 - Use of English</option>
+                            <option value="GST102">GST102 - Nigerian Peoples & Culture</option>
+                            <option value="MTH101">MTH101 - Calculus I</option>
+                            <option value="MTH102">MTH102 - Calculus II</option>
+                            <option value="PHY101">PHY101 - General Physics I</option>
+                            <option value="STA101">STA101 - Statistics</option>
                         </select>
                     </div>
 
@@ -68,17 +62,11 @@
                         <div class="radio-group">
                             <label class="radio-option">
                                 <input type="radio" name="feedbackMode" value="instant" checked>
-                                <span class="radio-label">
-                                    <strong>Instant Feedback</strong>
-                                    <small>See corrections immediately</small>
-                                </span>
+                                <span class="radio-label">Instant Feedback</span>
                             </label>
                             <label class="radio-option">
                                 <input type="radio" name="feedbackMode" value="review">
-                                <span class="radio-label">
-                                    <strong>Exam Simulation</strong>
-                                    <small>Review after submission</small>
-                                </span>
+                                <span class="radio-label">Exam Simulation</span>
                             </label>
                         </div>
                     </div>
@@ -86,22 +74,20 @@
                     <div class="config-group">
                         <label>⏱️ Timer Duration</label>
                         <div class="timer-options">
-                            <label class="timer-option"><input type="radio" name="timerDuration" value="15"><span>15 Minutes</span></label>
-                            <label class="timer-option"><input type="radio" name="timerDuration" value="30" checked><span>30 Minutes</span></label>
-                            <label class="timer-option"><input type="radio" name="timerDuration" value="45"><span>45 Minutes</span></label>
-                            <label class="timer-option"><input type="radio" name="timerDuration" value="60"><span>60 Minutes</span></label>
-                            <label class="timer-option"><input type="radio" name="timerDuration" value="unlimited"><span>Unlimited</span></label>
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="15"> 15 Minutes</label>
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="30" checked> 30 Minutes</label>
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="60"> 60 Minutes</label>
+                            <label class="timer-option"><input type="radio" name="timerDuration" value="unlimited"> Unlimited</label>
                         </div>
                     </div>
 
                     <div class="config-group">
                         <label>📊 Question Count</label>
                         <div class="question-options">
-                            <label class="question-option"><input type="radio" name="questionCount" value="5"><span>5 Questions</span><small>Quick Quiz</small></label>
-                            <label class="question-option"><input type="radio" name="questionCount" value="10" checked><span>10 Questions</span><small>Standard</small></label>
-                            <label class="question-option"><input type="radio" name="questionCount" value="20"><span>20 Questions</span><small>Full Exam</small></label>
-                            <label class="question-option"><input type="radio" name="questionCount" value="30"><span>30 Questions</span><small>Extended</small></label>
-                            <label class="question-option"><input type="radio" name="questionCount" value="50"><span>50 Questions</span><small>Marathon</small></label>
+                            <label class="question-option"><input type="radio" name="questionCount" value="10" checked> 10 Questions</label>
+                            <label class="question-option"><input type="radio" name="questionCount" value="20"> 20 Questions</label>
+                            <label class="question-option"><input type="radio" name="questionCount" value="30"> 30 Questions</label>
+                            <label class="question-option"><input type="radio" name="questionCount" value="50"> 50 Questions</label>
                         </div>
                     </div>
 
@@ -112,12 +98,42 @@
     </div>
 
     <script src="auth.js"></script>
-    <script src="questions.json.js"></script>
-    <script src="configure.js"></script>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase-config.js"></script>
-    <script src="auth.js"></script>
-    <script src="dashboard.js"></script>
+    <script>
+        // Get current user
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser) {
+            const userNameSpan = document.querySelector('.user-name');
+            if (userNameSpan) userNameSpan.textContent = currentUser.name.split(' ')[0];
+        }
+        
+        // Start practice session
+        document.getElementById('startPracticeBtn').addEventListener('click', function() {
+            const course = document.getElementById('configCourse').value;
+            if (!course) {
+                alert('Please select a course!');
+                return;
+            }
+            
+            const feedbackMode = document.querySelector('input[name="feedbackMode"]:checked').value;
+            const timerDuration = document.querySelector('input[name="timerDuration"]:checked').value;
+            const questionCount = parseInt(document.querySelector('input[name="questionCount"]:checked').value);
+            
+            // Save config
+            sessionStorage.setItem('examConfig', JSON.stringify({
+                course: course,
+                feedbackMode: feedbackMode,
+                timerDuration: timerDuration === 'unlimited' ? null : parseInt(timerDuration),
+                questionCount: questionCount
+            }));
+            
+            window.location.href = 'exam.html';
+        });
+        
+        // Logout function
+        window.logout = function() {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        };
+    </script>
 </body>
 </html>
